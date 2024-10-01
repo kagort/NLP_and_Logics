@@ -1,14 +1,14 @@
 import spacy
 from colorama import Fore, Style, init
-from nltk.corpus import stopwords  # Импортируем стоп-слова
-from nltk.probability import FreqDist  # Импортируем FreqDist для частотного анализа
+from nltk.corpus import stopwords
+from nltk.probability import FreqDist
 import nltk
 import dash
 from dash import dcc, html
 from dash.dependencies import Input, Output
-import plotly.graph_objects as go  # Импортируем plotly для интерактивных графиков
+import plotly.graph_objects as go
 
-# Убедимся, что стоп-слова скачаны (если это не сделано ранее)
+# Убедимся, что стоп-слова скачаны
 nltk.download('stopwords')
 
 # Инициализация colorama
@@ -23,40 +23,33 @@ with open('text1.txt', "r", encoding="utf-16") as f:
 
 doc = nlp(text)
 
-# Вводим список ключевых слов, удаляем пробелы по краям
+# Вводим список ключевых слов
 words = [word.strip() for word in input('Введите ключевые слова через запятую:').lower().split(',')]
 
 # Создаем словари для хранения зависимых слов для каждого ключевого слова
-Sub = {word: [] for word in words}  # глагол подлежащего для каждого ключевого слова
-Obj = {word: [] for word in words}  # глагол дополнения для каждого ключевого слова
-Adj = {word: [] for word in words}  # прилагательные для каждого ключевого слова
-Noun = {word: [] for word in words}  # существительные для каждого ключевого слова
-Participle = {word: [] for word in words}  # причастия для каждого ключевого слова
-word_counts = {word: 0 for word in words}  # Счетчик вхождений для каждого поискового термина
+Sub = {word: [] for word in words}
+Obj = {word: [] for word in words}
+Adj = {word: [] for word in words}
+Noun = {word: [] for word in words}
+Participle = {word: [] for word in words}
+word_counts = {word: 0 for word in words}
 
 # Нумерация предложений
-print("Список предложений в тексте:")
-for i, sent in enumerate(doc.sents, 1):
-    print(f"{i}. {sent}")
-
-print("\nНачало анализа...\n")
+sentences = list(doc.sents)
 
 # Выборка глаголов, существительных, прилагательных и причастий по каждому поисковому термину
 for word in words:
-    print(f"\nАнализ для термина: {word}\n")
-    for sent in doc.sents:
-        print(sent)
+    for sent in sentences:
         for token in sent:
             if token.lemma_ == word:
                 a = token
-                word_counts[word] += 1  # Увеличиваем счетчик поискового термина
+                word_counts[word] += 1
 
-                if a.dep_ == 'nsubj':  # как подлежащее
-                    Sub[word].append(a.head.text)  # Записываем только для текущего ключевого слова
-                if a.dep_ in ('dobj', 'obj', 'obl'):  # как дополнение
-                    Obj[word].append(a.head.text)  # Записываем только для текущего ключевого слова
+                if a.dep_ == 'nsubj':
+                    Sub[word].append(a.head.text)
+                if a.dep_ in ('dobj', 'obj', 'obl'):
+                    Obj[word].append(a.head.text)
 
-                # Зависимые слова
                 for ch in a.children:
                     if ch.pos_ == 'ADJ':
                         Adj[word].append(ch.lemma_)
@@ -93,23 +86,10 @@ fdist_sw_Adj = {word: FreqDist(filt_Adj[word]) for word in words}
 fdist_sw_Noun = {word: FreqDist(filt_Noun[word]) for word in words}
 fdist_sw_Participle = {word: FreqDist(filt_Participle[word]) for word in words}
 
-# Самые частотные слова для контекстных окон
-tooltips = {
-    'Глаголы подлежащего': [', '.join([f'{w[0]} ({w[1]})' for w in fdist_sw_Sub[word].most_common(5)]) for word in
-                            words],
-    'Глаголы дополнения': [', '.join([f'{w[0]} ({w[1]})' for w in fdist_sw_Obj[word].most_common(5)]) for word in
-                           words],
-    'Прилагательные': [', '.join([f'{w[0]} ({w[1]})' for w in fdist_sw_Adj[word].most_common(5)]) for word in words],
-    'Существительные': [', '.join([f'{w[0]} ({w[1]})' for w in fdist_sw_Noun[word].most_common(5)]) for word in words],
-    'Причастия': [', '.join([f'{w[0]} ({w[1]})' for w in fdist_sw_Participle[word].most_common(5)]) for word in words],
-}
-
-# Dash приложение
+# Создание Dash приложения
 app = dash.Dash(__name__)
 
-
 # Создаем график с Plotly
-# Добавляем частоту ключевых слов в заголовок гистограммы
 def create_figure():
     fig = go.Figure()
 
@@ -118,13 +98,10 @@ def create_figure():
 
     # Глаголы подлежащего
     fig.add_trace(go.Bar(
-        x=words_with_freq,  # Обновляем ось X
+        x=words_with_freq,
         y=[len(Sub[word]) for word in words],
         name='Глаголы подлежащего',
         marker_color='green',
-        customdata=[filt_Sub[word] for word in words],
-        hovertext=tooltips['Глаголы подлежащего'],  # Контекстные окна с частотными словами
-        hovertemplate='%{hovertext}<extra></extra>'
     ))
 
     # Глаголы дополнения
@@ -133,9 +110,6 @@ def create_figure():
         y=[len(Obj[word]) for word in words],
         name='Глаголы дополнения',
         marker_color='cyan',
-        customdata=[filt_Obj[word] for word in words],
-        hovertext=tooltips['Глаголы дополнения'],
-        hovertemplate='%{hovertext}<extra></extra>'
     ))
 
     # Прилагательные
@@ -144,9 +118,6 @@ def create_figure():
         y=[len(Adj[word]) for word in words],
         name='Прилагательные',
         marker_color='magenta',
-        customdata=[filt_Adj[word] for word in words],
-        hovertext=tooltips['Прилагательные'],
-        hovertemplate='%{hovertext}<extra></extra>'
     ))
 
     # Существительные
@@ -155,9 +126,6 @@ def create_figure():
         y=[len(Noun[word]) for word in words],
         name='Существительные',
         marker_color='red',
-        customdata=[filt_Noun[word] for word in words],
-        hovertext=tooltips['Существительные'],
-        hovertemplate='%{hovertext}<extra></extra>'
     ))
 
     # Причастия
@@ -166,9 +134,6 @@ def create_figure():
         y=[len(Participle[word]) for word in words],
         name='Причастия',
         marker_color='blue',
-        customdata=[filt_Participle[word] for word in words],
-        hovertext=tooltips['Причастия'],
-        hovertemplate='%{hovertext}<extra></extra>'
     ))
 
     fig.update_layout(
@@ -181,14 +146,26 @@ def create_figure():
 
     return fig
 
-# Обработка клика и вывод слов с их частотностью в порядке убывания
+
+# Layout приложения
+app.layout = html.Div([
+    dcc.Graph(
+        id='interactive-graph',
+        figure=create_figure()
+    ),
+    html.Div(id='output-text'),
+    html.Div(id='output-sentences')  # Для вывода предложений
+])
+
+# Обработка клика по графику
 @app.callback(
-    Output('output-text', 'children'),
+    [Output('output-text', 'children'),
+     Output('output-sentences', 'children')],
     [Input('interactive-graph', 'clickData')]
 )
 def display_click_data(clickData):
     if clickData is None:
-        return "Кликните на столбец, чтобы увидеть список зависимых слов."
+        return "Кликните на столбец, чтобы увидеть список зависимых слов.", ""
 
     # Получаем категорию и ключевое слово
     point = clickData['points'][0]
@@ -198,9 +175,8 @@ def display_click_data(clickData):
 
     categories = ['Глаголы подлежащего', 'Глаголы дополнения', 'Прилагательные', 'Существительные', 'Причастия']
 
-    # Определяем, какая категория была кликнута
     if category == 0:
-        data = fdist_sw_Sub[label].most_common()  # Сортировка по частоте
+        data = fdist_sw_Sub[label].most_common()
     elif category == 1:
         data = fdist_sw_Obj[label].most_common()
     elif category == 2:
@@ -210,23 +186,17 @@ def display_click_data(clickData):
     elif category == 4:
         data = fdist_sw_Participle[label].most_common()
 
-    # Формируем строку вывода с частотностью
     word_list_with_freq = ', '.join([f'{w[0]} ({w[1]})' for w in data])
 
-    return f"Категория: {categories[category]}, Ключевое слово: {label}, Список слов: {word_list_with_freq}"
+    # Находим предложения, в которых встречается слово
+    sentences_with_word = [str(sent) for sent in sentences if label in sent.text]
 
+    return (
+        f"Категория: {categories[category]}, Ключевое слово: {label}, Список слов: {word_list_with_freq}",
+        html.Ol([html.Li(sent) for sent in sentences_with_word])  # Выводим предложения в списке
+    )
 
 
 # Запуск приложения
-# Установка макета перед запуском сервера
 if __name__ == '__main__':
-    app.layout = html.Div([  # Убедимся, что макет установлен перед запуском
-        dcc.Graph(
-            id='interactive-graph',
-            figure=create_figure()
-        ),
-        html.Div(id='output-text')
-    ])
-
-    # Запуск приложения
     app.run_server(debug=True)

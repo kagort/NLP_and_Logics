@@ -18,7 +18,7 @@ init(autoreset=True)
 nlp = spacy.load("ru_core_news_sm")
 
 # Открытие и чтение файла
-with open('text1.txt', "r", encoding="utf-16") as f:
+with open('text3N.txt', "r", encoding="utf-16") as f:
     text = f.read().lower()
 
 doc = nlp(text)

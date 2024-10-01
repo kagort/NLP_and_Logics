@@ -2,7 +2,7 @@ import spacy
 from termcolor import colored  # библиотека для выделения цветом
 
 nlp = spacy.load("ru_core_news_sm")
-f = open('text2.txt', "r", encoding="utf-16")
+f = open('text1.txt', "r", encoding="utf-16")
 
 text = f.read()
 text = text.lower()

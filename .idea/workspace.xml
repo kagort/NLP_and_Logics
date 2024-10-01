@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62d7b290-8a2c-4ec9-beb9-bfc457ca4f03" name="Changes" comment="Good">
-      <change afterPath="$PROJECT_DIR$/Word_Counter.py" afterDir="false" />
+    <list default="true" id="62d7b290-8a2c-4ec9-beb9-bfc457ca4f03" name="Changes" comment="Merge remote-tracking branch 'origin/Double-route' into Double-route">
+      <change afterPath="$PROJECT_DIR$/text3N.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/text4Z.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/List_plus_visual_stable.py" beforeDir="false" afterPath="$PROJECT_DIR$/List_plus_visual_stable.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visual_exp.py" beforeDir="false" afterPath="$PROJECT_DIR$/visual_exp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Word_Counter.py" beforeDir="false" afterPath="$PROJECT_DIR$/Word_Counter.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +176,23 @@
       <option name="project" value="LOCAL" />
       <updated>1727787358217</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Merge remote-tracking branch 'origin/Double-route' into Double-route">
+      <option name="closed" value="true" />
+      <created>1727789677502</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1727789677502</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Merge remote-tracking branch 'origin/Double-route' into Double-route">
+      <option name="closed" value="true" />
+      <created>1727789701374</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1727789701374</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -219,6 +236,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Good" />
-    <option name="LAST_COMMIT_MESSAGE" value="Good" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/Double-route' into Double-route" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/Double-route' into Double-route" />
   </component>
 </project>

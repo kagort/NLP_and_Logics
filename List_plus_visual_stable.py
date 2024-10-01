@@ -109,12 +109,16 @@ app = dash.Dash(__name__)
 
 
 # Создаем график с Plotly
+# Добавляем частоту ключевых слов в заголовок гистограммы
 def create_figure():
     fig = go.Figure()
 
+    # Формируем ключевые слова с указанием частотности
+    words_with_freq = [f'{word} ({word_counts[word]})' for word in words]
+
     # Глаголы подлежащего
     fig.add_trace(go.Bar(
-        x=words,
+        x=words_with_freq,  # Обновляем ось X
         y=[len(Sub[word]) for word in words],
         name='Глаголы подлежащего',
         marker_color='green',
@@ -125,7 +129,7 @@ def create_figure():
 
     # Глаголы дополнения
     fig.add_trace(go.Bar(
-        x=words,
+        x=words_with_freq,
         y=[len(Obj[word]) for word in words],
         name='Глаголы дополнения',
         marker_color='cyan',
@@ -136,7 +140,7 @@ def create_figure():
 
     # Прилагательные
     fig.add_trace(go.Bar(
-        x=words,
+        x=words_with_freq,
         y=[len(Adj[word]) for word in words],
         name='Прилагательные',
         marker_color='magenta',
@@ -147,7 +151,7 @@ def create_figure():
 
     # Существительные
     fig.add_trace(go.Bar(
-        x=words,
+        x=words_with_freq,
         y=[len(Noun[word]) for word in words],
         name='Существительные',
         marker_color='red',
@@ -158,7 +162,7 @@ def create_figure():
 
     # Причастия
     fig.add_trace(go.Bar(
-        x=words,
+        x=words_with_freq,
         y=[len(Participle[word]) for word in words],
         name='Причастия',
         marker_color='blue',
@@ -169,7 +173,7 @@ def create_figure():
 
     fig.update_layout(
         title='Интерактивная визуализация зависимых слов по ключевым терминам',
-        xaxis_title='Ключевые слова',
+        xaxis_title='Ключевые слова (с частотой)',
         yaxis_title='Количество',
         barmode='group',
         hovermode='x unified'
@@ -177,18 +181,7 @@ def create_figure():
 
     return fig
 
-
-# Layout приложения
-app.layout = html.Div([
-    dcc.Graph(
-        id='interactive-graph',
-        figure=create_figure()
-    ),
-    html.Div(id='output-text')
-])
-
-
-# Обработка клика по графику
+# Обработка клика и вывод слов с их частотностью в порядке убывания
 @app.callback(
     Output('output-text', 'children'),
     [Input('interactive-graph', 'clickData')]
@@ -199,26 +192,41 @@ def display_click_data(clickData):
 
     # Получаем категорию и ключевое слово
     point = clickData['points'][0]
-    label = point['label']  # Ключевое слово
+    label_with_freq = point['label']  # Ключевое слово с частотой
+    label = label_with_freq.split(' (')[0]  # Извлекаем само ключевое слово
     category = point['curveNumber']  # Категория
 
     categories = ['Глаголы подлежащего', 'Глаголы дополнения', 'Прилагательные', 'Существительные', 'Причастия']
 
     # Определяем, какая категория была кликнута
     if category == 0:
-        data = filt_Sub[label]
+        data = fdist_sw_Sub[label].most_common()  # Сортировка по частоте
     elif category == 1:
-        data = filt_Obj[label]
+        data = fdist_sw_Obj[label].most_common()
     elif category == 2:
-        data = filt_Adj[label]
+        data = fdist_sw_Adj[label].most_common()
     elif category == 3:
-        data = filt_Noun[label]
+        data = fdist_sw_Noun[label].most_common()
     elif category == 4:
-        data = filt_Participle[label]
+        data = fdist_sw_Participle[label].most_common()
 
-    return f"Категория: {categories[category]}, Ключевое слово: {label}, Список слов: {', '.join(data)}"
+    # Формируем строку вывода с частотностью
+    word_list_with_freq = ', '.join([f'{w[0]} ({w[1]})' for w in data])
+
+    return f"Категория: {categories[category]}, Ключевое слово: {label}, Список слов: {word_list_with_freq}"
+
 
 
 # Запуск приложения
+# Установка макета перед запуском сервера
 if __name__ == '__main__':
+    app.layout = html.Div([  # Убедимся, что макет установлен перед запуском
+        dcc.Graph(
+            id='interactive-graph',
+            figure=create_figure()
+        ),
+        html.Div(id='output-text')
+    ])
+
+    # Запуск приложения
     app.run_server(debug=True)

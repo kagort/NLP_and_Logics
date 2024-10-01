@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="62d7b290-8a2c-4ec9-beb9-bfc457ca4f03" name="Changes" comment="Merge remote-tracking branch 'origin/Double-route' into Double-route">
-      <change afterPath="$PROJECT_DIR$/text3N.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/text4Z.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/List_plus_visual_stable.py" beforeDir="false" afterPath="$PROJECT_DIR$/List_plus_visual_stable.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Word_Counter.py" beforeDir="false" afterPath="$PROJECT_DIR$/Word_Counter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visual_exp.py" beforeDir="false" afterPath="$PROJECT_DIR$/visual_exp.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

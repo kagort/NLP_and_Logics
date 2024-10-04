@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62d7b290-8a2c-4ec9-beb9-bfc457ca4f03" name="Changes" comment="Merge remote-tracking branch 'origin/Double-route' into Double-route">
+    <list default="true" id="62d7b290-8a2c-4ec9-beb9-bfc457ca4f03" name="Changes" comment="Good">
+      <change afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/NLP and Logics.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/NLP and Logics.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_01_10_2024_17_06__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_01_10_2024_17_06__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Word_Counter.py" beforeDir="false" afterPath="$PROJECT_DIR$/Word_Counter.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/visual_exp.py" beforeDir="false" afterPath="$PROJECT_DIR$/visual_exp.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +33,9 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -43,6 +51,7 @@
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;Python.List_plus_visual_stable.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Word_Counter.executor&quot;: &quot;Run&quot;,
     &quot;Python.list_plus_visual.executor&quot;: &quot;Run&quot;,
     &quot;Python.main(GPT).executor&quot;: &quot;Run&quot;,
     &quot;Python.main(GPT)list.executor&quot;: &quot;Run&quot;,
@@ -57,6 +66,7 @@
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="NLP and Logics" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -109,131 +119,12 @@
       <option name="project" value="LOCAL" />
       <updated>1727707380111</updated>
     </task>
-    <task id="LOCAL-00003" summary="Good">
-      <option name="closed" value="true" />
-      <created>1727713905940</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1727713905940</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Good">
-      <option name="closed" value="true" />
-      <created>1727714005644</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1727714005644</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Good">
-      <option name="closed" value="true" />
-      <created>1727714044745</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1727714044745</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Good">
-      <option name="closed" value="true" />
-      <created>1727714056947</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1727714056947</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Good">
-      <option name="closed" value="true" />
-      <created>1727787304846</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1727787304846</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Good">
-      <option name="closed" value="true" />
-      <created>1727787324031</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1727787324031</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Good">
-      <option name="closed" value="true" />
-      <created>1727787337523</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1727787337523</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Good">
-      <option name="closed" value="true" />
-      <created>1727787358217</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1727787358217</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Merge remote-tracking branch 'origin/Double-route' into Double-route">
-      <option name="closed" value="true" />
-      <created>1727789677502</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1727789677502</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Merge remote-tracking branch 'origin/Double-route' into Double-route">
-      <option name="closed" value="true" />
-      <created>1727789701374</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1727789701374</updated>
-    </task>
-    <option name="localTasksCounter" value="13" />
+    <option name="localTasksCounter" value="3" />
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="master" />
-                </option>
-              </RecentGroup>
-            </list>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="master" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Good" />
-    <MESSAGE value="Merge remote-tracking branch 'origin/Double-route' into Double-route" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/Double-route' into Double-route" />
+    <option name="LAST_COMMIT_MESSAGE" value="Good" />
   </component>
 </project>

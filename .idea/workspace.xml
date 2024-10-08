@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62d7b290-8a2c-4ec9-beb9-bfc457ca4f03" name="Changes" comment="Merge remote-tracking branch 'origin/Double-route' into Double-route" />
+    <list default="true" id="62d7b290-8a2c-4ec9-beb9-bfc457ca4f03" name="Changes" comment="Merge remote-tracking branch 'origin/Double-route' into Double-route">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visual_exp.py" beforeDir="false" afterPath="$PROJECT_DIR$/visual_exp.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,6 +28,20 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "kagort"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="965f84fb-ee20-4e84-9449-310a267b9d6d" />
+        <option name="url" value="https://github.com/kagort/NLP_and_Logics.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -42,6 +59,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Python.Heatmap.executor": "Run",
     "Python.List_plus_visual_stable.executor": "Run",
     "Python.Word_Counter.executor": "Run",
     "Python.list_plus_visual.executor": "Run",
@@ -143,7 +161,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728393490277</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Merge remote-tracking branch 'origin/Double-route' into Double-route">
+      <option name="closed" value="true" />
+      <created>1728393532802</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1728393532802</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

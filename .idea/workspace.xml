@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62d7b290-8a2c-4ec9-beb9-bfc457ca4f03" name="Changes" comment="Good">
-      <change afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/NLP and Logics.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/NLP and Logics.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_01_10_2024_17_06__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_01_10_2024_17_06__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Word_Counter.py" beforeDir="false" afterPath="$PROJECT_DIR$/Word_Counter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/visual_exp.py" beforeDir="false" afterPath="$PROJECT_DIR$/visual_exp.py" afterDir="false" />
-    </list>
+    <list default="true" id="62d7b290-8a2c-4ec9-beb9-bfc457ca4f03" name="Changes" comment="Merge remote-tracking branch 'origin/Double-route' into Double-route" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,7 +20,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="Double-route" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -47,22 +39,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Python.List_plus_visual_stable.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Word_Counter.executor&quot;: &quot;Run&quot;,
-    &quot;Python.list_plus_visual.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main(GPT).executor&quot;: &quot;Run&quot;,
-    &quot;Python.main(GPT)list.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.visual_exp.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Double-route&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Python.List_plus_visual_stable.executor": "Run",
+    "Python.Word_Counter.executor": "Run",
+    "Python.list_plus_visual.executor": "Run",
+    "Python.main(GPT).executor": "Run",
+    "Python.main(GPT)list.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.visual_exp.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Triple-route",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="NLP and Logics" />
@@ -119,12 +111,45 @@
       <option name="project" value="LOCAL" />
       <updated>1727707380111</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Merge remote-tracking branch 'origin/Double-route' into Double-route">
+      <option name="closed" value="true" />
+      <created>1728392963374</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1728392963374</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Merge remote-tracking branch 'origin/Double-route' into Double-route">
+      <option name="closed" value="true" />
+      <created>1728392996396</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1728392996396</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Merge remote-tracking branch 'origin/Double-route' into Double-route">
+      <option name="closed" value="true" />
+      <created>1728393473919</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1728393473919</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Merge remote-tracking branch 'origin/Double-route' into Double-route">
+      <option name="closed" value="true" />
+      <created>1728393490277</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1728393490277</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Good" />
-    <option name="LAST_COMMIT_MESSAGE" value="Good" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/Double-route' into Double-route" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/Double-route' into Double-route" />
   </component>
 </project>
